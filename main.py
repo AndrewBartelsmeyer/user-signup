@@ -34,10 +34,10 @@ def build_page(username, user_err, email, email_err, password_err):
 
     header = "<h1>User signup</h1>"
     user_label = "<label>Username:</label>"
-    user_input = "<input type='text' name='username' value = '" + username + "'/>"
+    user_input = "<input type='text' name='username' value = '" + cgi.escape(username, quote=True) + "'/>"
 
     email_label = "<label>Email:</label>"
-    email_input = "<input type='text' name='email' value = '" + email + "'/>"
+    email_input = "<input type='text' name='email' value = '" + cgi.escape(email, quote=True) + "'/>"
 
     password_label = "<label>Password:</label>"
     password_input = "<input type='text' name='password'/>"
